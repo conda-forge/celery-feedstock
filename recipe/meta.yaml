@@ -23,15 +23,12 @@ requirements:
     build:
         - python
         - setuptools
-        - pytz
-        - billiard >=3.3.0.23,<3.4
-        - kombu >=3.0.34,<4.0
+        
     run:
         - python
-        - pytz
-        - billiard >=3.3.0.23,<3.4
-        - kombu >=3.0.34,<4.0
-        - sqlalchemy
+        - pytz >dev
+        - billiard >=3.5.0.2,<3.6.0
+        - kombu >=4.0.2,<5.0
 
 test:
     imports:
