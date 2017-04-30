@@ -1,6 +1,7 @@
 {% set name = "celery" %}
-{% set version = "3.1.25" %}
-{% set sha256 = "6ced63033bc663e60c992564954dbb5c84c43899f7f1a04b739957350f6b55f3" %}
+{% set version = "4.0.2" %}
+{% set compress_type = "tar.gz"
+{% set sha256 = "e3d5a6c56a73ff8f2ddd4d06dc37f4c2afe4bb4da7928b884d0725ea865ef54d" %}
 {% set build = 0 %}
 
 package:
@@ -8,8 +9,8 @@ package:
     version: {{ version }}
 
 source:
-    fn: {{ name }}-{{ version }}.tar.gz
-    url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    fn: {{ name }}-{{ version }}.{{ compress_type }}
+    url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
     sha256: {{ sha256 }}
 
 build:
@@ -17,9 +18,6 @@ build:
     script: python setup.py install --single-version-externally-managed --record=record.txt
     entry_points:
         - celery = celery.__main__:main
-        - celeryd = celery.__main__:_compat_worker
-        - celerybeat = celery.__main__:_compat_beat
-        - celeryd-multi = celery.__main__:_compat_multi
 
 requirements:
     build:
