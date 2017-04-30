@@ -1,6 +1,6 @@
 {% set name = "celery" %}
 {% set version = "4.0.2" %}
-{% set compress_type = "tar.gz"
+{% set compress_type = "tar.gz" %}
 {% set sha256 = "e3d5a6c56a73ff8f2ddd4d06dc37f4c2afe4bb4da7928b884d0725ea865ef54d" %}
 {% set build = 0 %}
 
