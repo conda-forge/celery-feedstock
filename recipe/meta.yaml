@@ -1,7 +1,5 @@
 {% set name = "celery" %}
-{% set version = "4.1.0" %}
-{% set sha256 = "77ff3730198d6a17b3c1f05579ebe570b579efb35f6d7e13dba3b1368d068b35" %}
-{% set build = 0 %}
+{% set version = "4.2.0" %}
 
 package:
     name: {{ name|lower }}
@@ -10,10 +8,10 @@ package:
 source:
     fn: {{ name }}-{{ version }}.tar.gz
     url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+    sha256: ff727c115533edbc7b81b2b4ba1ec88d1c2fc4836e1e2f4c3c33a76ff53e5d7f
 
 build:
-    number: {{ build }}
+    number: 0
     script: python setup.py install --single-version-externally-managed --record=record.txt
     entry_points:
         - celery = celery.__main__:main

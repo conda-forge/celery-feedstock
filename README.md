@@ -14,14 +14,16 @@ Summary: Distributed Task Queue
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/celery-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/celery-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/celery-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/celery-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/celery-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/celery-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/celery-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/celery-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/celery-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/celery-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/celery-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/celery-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/celery/badges/version.svg)](https://anaconda.org/conda-forge/celery)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/celery/badges/downloads.svg)](https://anaconda.org/conda-forge/celery)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-celery-green.svg)](https://anaconda.org/conda-forge/celery) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/celery.svg)](https://anaconda.org/conda-forge/celery) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/celery.svg)](https://anaconda.org/conda-forge/celery) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/celery.svg)](https://anaconda.org/conda-forge/celery) |
 
 Installing celery
 =================
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
