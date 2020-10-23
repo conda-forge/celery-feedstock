@@ -27,6 +27,9 @@ requirements:
     - kombu >=5.0.0,<6.0
     - vine 1.3.0.*
     - sqlalchemy
+    - click >=7.0
+    - click-didyoumean >=0.0.3
+    - click-repl >=0.1.6
     - cryptography
   run_constrained:
     - sphinx >=2.0
