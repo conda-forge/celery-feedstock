@@ -5,11 +5,13 @@ Home: http://celeryproject.org
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/celery-feedstock/blob/master/LICENSE.txt)
 
 Summary: Distributed Task Queue
 
+Development: https://github.com/celery/celery
 
+Documentation: http://docs.celeryproject.org/en/latest/index.html
 
 Current build status
 ====================
