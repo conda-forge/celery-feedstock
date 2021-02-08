@@ -30,6 +30,7 @@ requirements:
     - click >=7.0
     - click-didyoumean >=0.0.3
     - click-repl >=0.1.6
+    - click-plugins >=1.1.1
     - cryptography
   run_constrained:
     - sphinx >=2.0
