@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - celery = celery.__main__:main
@@ -27,7 +27,7 @@ requirements:
     - kombu >=5.0.0,<6.0
     - vine >=5.0.0,<6.0
     - sqlalchemy
-    - click >=7.0
+    - click >=7.0,<8.0
     - click-didyoumean >=0.0.3
     - click-repl >=0.1.6
     - click-plugins >=1.1.1
