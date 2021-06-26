@@ -40,7 +40,7 @@ test:
   requires:
     - boto3 >=1.9.178
     - case >=1.3.1
-    - moto ==1.3.7
+    - moto
     - pytest 6.2.*
     - pytest-celery
     - pytest-timeout 1.4.2.*
@@ -54,7 +54,8 @@ test:
     - celery.app.task
     - celery.apps
     - celery.backends
-    - celery.backends.database
+    # Requires sqlalchemy but it's an optional dependency
+    # - celery.backends.database
     - celery.bin
     - celery.concurrency
     - celery.contrib
