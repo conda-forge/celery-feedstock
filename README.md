@@ -120,6 +120,7 @@ Feedstock Maintainers
 =====================
 
 * [@chrisburr](https://github.com/chrisburr/)
+* [@hadim](https://github.com/hadim/)
 * [@igortg](https://github.com/igortg/)
 * [@kwilcox](https://github.com/kwilcox/)
 * [@mcs07](https://github.com/mcs07/)
