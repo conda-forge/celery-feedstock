@@ -11,7 +11,7 @@ source:
   sha256: 8d9a3de9162965e97f8e8cc584c67aad83b3f7a267584fa47701ed11c3e0d4b0
 
 build:
-  number: 0
+  number: 2
   noarch: python
   entry_points:
     - celery = celery.__main__:main
@@ -23,10 +23,10 @@ requirements:
     - pip
   run:
     - billiard >=3.6.4.0,<4.0
-    - click >=7.0,<8.0
+    - click >=8.0,<9.0
     - click-didyoumean >=0.0.3
     - click-plugins >=1.1.1
-    - click-repl >=0.1.6
+    - click-repl >=0.2.0
     - cryptography
     - kombu >=5.1.0,<6.0
     - python >=3.6
@@ -91,3 +91,4 @@ extra:
     - sodre
     - igortg
     - mcs07
+    - hadim
