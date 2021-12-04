@@ -123,6 +123,7 @@ Feedstock Maintainers
 * [@igortg](https://github.com/igortg/)
 * [@kwilcox](https://github.com/kwilcox/)
 * [@mcs07](https://github.com/mcs07/)
+* [@pedrosanta](https://github.com/pedrosanta/)
 * [@pmlandwehr](https://github.com/pmlandwehr/)
 * [@sodre](https://github.com/sodre/)
 
