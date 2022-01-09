@@ -86,9 +86,7 @@ about:
 extra:
   recipe-maintainers:
     - chrisburr
-    - igortg
     - kwilcox
-    - mcs07
-    - pedrosanta
-    - pmlandwehr
     - sodre
+    - igortg
+    - mcs07
