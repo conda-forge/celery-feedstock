@@ -48,31 +48,31 @@ test:
   source_files:
     - t
   imports:
-      - celery
-      - celery.app
-      - celery.app.task
-      - celery.apps
-      - celery.backends
-      # Requires sqlalchemy but it's an optional dependency
-      # - celery.backends.database
-      - celery.bin
-      - celery.concurrency
-      - celery.contrib
-      - celery.events
-      - celery.fixups
-      - celery.loaders
-      - celery.security
-      - celery.utils
-      - celery.utils.dispatch
-      - celery.worker
+    - celery
+    - celery.app
+    - celery.app.task
+    - celery.apps
+    - celery.backends
+    # Requires sqlalchemy but it's an optional dependency
+    # - celery.backends.database
+    - celery.bin
+    - celery.concurrency
+    - celery.contrib
+    - celery.events
+    - celery.fixups
+    - celery.loaders
+    - celery.security
+    - celery.utils
+    - celery.utils.dispatch
+    - celery.worker
   commands:
-      - pip check
-      - celery --version
-      - celery worker --help
-      - celery beat --help
-      - celery multi help
-      - celery shell --help
-      - pytest t/unit
+    - pip check
+    - celery --version
+    - celery worker --help
+    - celery beat --help
+    - celery multi help
+    - celery shell --help
+    - pytest t/unit
 
 about:
   home: http://celeryproject.org
