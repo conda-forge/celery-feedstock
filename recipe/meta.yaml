@@ -11,7 +11,7 @@ source:
   sha256: d1398cadf30f576266b34370e28e880306ec55f7a4b6307549b0ae9c15663481
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - celery = celery.__main__:main
@@ -31,7 +31,6 @@ requirements:
     - kombu >=5.2.3,<6.0
     - python >=3.7
     - pytz >=2021.3
-    - setuptools >=59.1.1,<59.7.0
     - vine >=5.0.0,<6.0
 
 test:
