@@ -1,5 +1,5 @@
 {% set name = "celery" %}
-{% set version = "5.2.6" %}
+{% set version = "5.2.7" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/celery-{{ version }}.tar.gz
-  sha256: d1398cadf30f576266b34370e28e880306ec55f7a4b6307549b0ae9c15663481
+  sha256: fafbd82934d30f8a004f81e8f7a062e31413a23d444be8ee3326553915958c6d
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - celery = celery.__main__:main
