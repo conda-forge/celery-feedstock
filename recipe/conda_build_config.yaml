@@ -1,0 +1,5 @@
+channel_targets:
+  - conda-forge celery_dev
+
+channel_sources:
+  - conda-forge/label/kombu_dev,conda-forge
