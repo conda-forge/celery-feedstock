@@ -84,6 +84,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - efiop
     - chrisburr
     - kwilcox
     - sodre
