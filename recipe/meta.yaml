@@ -45,6 +45,7 @@ test:
     - pytest-celery
     - pytest-subtests
     - pytest-timeout
+    - pytest-click
     - boto3>=1.9.178
     - moto>=2.2.6
     - pip
