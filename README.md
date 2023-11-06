@@ -150,6 +150,5 @@ Feedstock Maintainers
 * [@chrisburr](https://github.com/chrisburr/)
 * [@efiop](https://github.com/efiop/)
 * [@kwilcox](https://github.com/kwilcox/)
-* [@mcs07](https://github.com/mcs07/)
 * [@sodre](https://github.com/sodre/)
 
