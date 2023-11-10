@@ -23,7 +23,7 @@ requirements:
     - pytest
     - python >=3.7
   run:
-    - billiard >=4.1.0,<5.0
+    - billiard >=4.2.0,<5.0
     - click >=8.1.2,<9.0
     - click-didyoumean >=0.3.0
     - click-plugins >=1.1.1
@@ -35,7 +35,7 @@ requirements:
     - python-tzdata >=2022.7
     - python-dateutil >=2.8.2
     - pytz >=2021.3
-    - vine >=5.0.0,<6.0
+    - vine >=5.1.0,<6.0
 
 test:
   requires:
