@@ -1,6 +1,5 @@
 {% set name = "celery" %}
-{% set version = "5.3.4" %}
-
+{% set version = "5.3.5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,34 +7,34 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/celery-{{ version }}.tar.gz
-  sha256: 9023df6a8962da79eb30c0c84d5f4863d9793a466354cc931d7f72423996de28
+  sha256: 6b65d8dd5db499dd6190c45aa6398e171b99592f2af62c312f7391587feb5458
 
 build:
-  number: 1
   noarch: python
   entry_points:
     - celery = celery.__main__:main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
+    - python >=3.8
     - pip
     - pytest
-    - python >=3.7
   run:
-    - billiard >=4.1.0,<5.0
+    - python >=3.8
+    - billiard >=4.2.0,<5.0
+    - kombu >=5.3.3,<6.0
+    - vine >=5.1.0,<6.0
     - click >=8.1.2,<9.0
     - click-didyoumean >=0.3.0
-    - click-plugins >=1.1.1
     - click-repl >=0.2.0
-    - kombu >=5.3.2,<6.0
+    - click-plugins >=1.1.1
     - importlib-metadata >=3.6
     - backports.zoneinfo >=0.2.1
-    - python >=3.7
+    # Source uses tzdata>=2022.7, python-tzdata and tzdata are available on conda-forge, python-tzdata is the correct conda package to use
     - python-tzdata >=2022.7
     - python-dateutil >=2.8.2
-    - pytz >=2021.3
-    - vine >=5.0.0,<6.0
 
 test:
   requires:
@@ -72,6 +71,7 @@ test:
   commands:
     - pip check
     - celery --version
+    - celery --help
     - celery worker --help
     - celery beat --help
     - celery multi help
@@ -88,7 +88,7 @@ about:
 
 extra:
   recipe-maintainers:
-    - efiop
     - chrisburr
+    - efiop
     - kwilcox
     - sodre
