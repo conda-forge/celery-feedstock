@@ -1,5 +1,5 @@
 {% set name = "celery" %}
-{% set version = "5.3.5" %}
+{% set version = "5.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/celery-{{ version }}.tar.gz
-  sha256: 6b65d8dd5db499dd6190c45aa6398e171b99592f2af62c312f7391587feb5458
+  sha256: 870cc71d737c0200c397290d730344cc991d13a057534353d124c9380267aab9
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.8
     - billiard >=4.2.0,<5.0
-    - kombu >=5.3.3,<6.0
+    - kombu >=5.3.4,<6.0
     - vine >=5.1.0,<6.0
     - click >=8.1.2,<9.0
     - click-didyoumean >=0.3.0
