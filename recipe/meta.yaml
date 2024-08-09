@@ -35,6 +35,7 @@ requirements:
     # Source uses tzdata>=2022.7, python-tzdata and tzdata are available on conda-forge, python-tzdata is the correct conda package to use
     - python-tzdata >=2022.7
     - python-dateutil >=2.8.2
+    - google-cloud-storage >=2.10.0
 
 test:
   requires:
