@@ -14,7 +14,7 @@ build:
   entry_points:
     - celery = celery.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -35,7 +35,6 @@ requirements:
     # Source uses tzdata>=2022.7, python-tzdata and tzdata are available on conda-forge, python-tzdata is the correct conda package to use
     - python-tzdata >=2022.7
     - python-dateutil >=2.8.2
-    - google-cloud-storage >=2.10.0
 
 test:
   requires:
@@ -48,6 +47,7 @@ test:
     - pytest-click
     - boto3>=1.9.178
     - moto>=2.2.6
+    - google-cloud-storage >=2.10.0
     - pip
   source_files:
     - t
