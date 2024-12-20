@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/celery-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/celery-{{ version }}.tar.gz
   sha256: 504a19140e8d3029d5acad88330c541d4c3f64c789d85f94756762d8bca7e706
 
 build:
@@ -14,15 +14,16 @@ build:
   entry_points:
     - celery = celery.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
+    - setuptools
     - pytest
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - billiard >=4.2.0,<5.0
     - kombu >=5.3.4,<6.0
     - vine >=5.1.0,<6.0
@@ -49,6 +50,7 @@ test:
     - moto>=2.2.6
     - google-cloud-storage >=2.10.0
     - pip
+    - python {{ python_min }}
   source_files:
     - t
   imports:
