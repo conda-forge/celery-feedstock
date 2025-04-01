@@ -1,0 +1,103 @@
+schema_version: 1
+
+context:
+  name: celery
+  version: 5.5.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/celery-${{ version }}.tar.gz
+  sha256: 10d49f9926d16237310109b0e6e1e2f7a2133b84e684bb36534d7663e66919bb
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - celery = celery.__main__:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+    - pytest
+  run:
+    - python >=${{ python_min }}
+    - billiard >=4.2.0,<5.0
+    - kombu >=5.5.2,<5.6
+    - vine >=5.1.0,<6.0
+    - click >=8.1.2,<9.0
+    - click-didyoumean >=0.3.0
+    - click-repl >=0.2.0
+    - click-plugins >=1.1.1
+    - importlib-metadata >=3.6
+    - backports.zoneinfo >=0.2.1
+    # Source uses tzdata>=2022.7, python-tzdata and tzdata are available on conda-forge, python-tzdata is the correct conda package to use
+    - python-tzdata >=2022.7
+    - python-dateutil >=2.8.2
+
+tests:
+  - python:
+      imports:
+        - celery
+        - celery.app
+        - celery.app.task
+        - celery.apps
+        - celery.backends
+        - celery.bin
+        - celery.concurrency
+        - celery.contrib
+        - celery.events
+        - celery.fixups
+        - celery.loaders
+        - celery.security
+        - celery.utils
+        - celery.utils.dispatch
+        - celery.worker
+  - files:
+      source:
+        - t
+    requirements:
+      run:
+        - dnspython
+        - pymongo
+        - pytest
+        - pytest-celery
+        - pytest-subtests
+        - pytest-timeout
+        - pytest-click
+        - boto3>=1.9.178
+        - moto>=2.2.6
+        - google-cloud-storage >=2.10.0
+        - pip
+        - python ${{ python_min }}
+    script:
+      - pip check
+      - celery --version
+      - celery --help
+      - celery worker --help
+      - celery beat --help
+      - celery multi help
+      - celery shell --help
+      - pytest t/unit
+
+about:
+  license_file: LICENSE
+  license: BSD-3-Clause
+  summary: Distributed Task Queue
+  homepage: http://celeryproject.org
+  repository: https://github.com/celery/celery
+  documentation: http://docs.celeryproject.org/en/latest/index.html
+
+extra:
+  recipe-maintainers:
+    - moritzwilksch
+    - chrisburr
+    - efiop
+    - kwilcox
+    - sodre
