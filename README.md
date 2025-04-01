@@ -3,7 +3,7 @@ About celery-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/celery-feedstock/blob/main/LICENSE.txt)
 
-Home: http://celeryproject.org
+Home: http://celeryproject.org/
 
 Package license: BSD-3-Clause
 
