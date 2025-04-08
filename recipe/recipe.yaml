@@ -35,6 +35,7 @@ requirements:
     - click-didyoumean >=0.3.0
     - click-repl >=0.2.0
     - click-plugins >=1.1.1
+    - cryptography ==44.0.2
     - importlib-metadata >=3.6
     - backports.zoneinfo >=0.2.1
     # Source uses tzdata>=2022.7, python-tzdata and tzdata are available on conda-forge, python-tzdata is the correct conda package to use
