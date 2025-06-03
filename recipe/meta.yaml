@@ -91,6 +91,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - achimgaedke
     - moritzwilksch
     - chrisburr
     - efiop
