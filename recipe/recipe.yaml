@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: celery
-  version: "5.5.3"
+  version: "5.6.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/celery-${{ version }}.tar.gz
-  sha256: 6c972ae7968c2b5281227f01c3a3f984037d21c5129d07bf3550cc2afc6b10a5
+  sha256: bdc9e02b1480dd137f2df392358c3e94bb623d4f47ae1bc0a7dc5821c90089c7
 
 build:
   number: 0
