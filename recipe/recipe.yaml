@@ -3,6 +3,8 @@ schema_version: 1
 context:
   name: celery
   version: "5.6.3"
+  # celery 5.6 depends on kombu >=5.6, which requires Python >=3.10
+  python_min: "3.10"
 
 package:
   name: ${{ name|lower }}
