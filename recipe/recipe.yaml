@@ -56,10 +56,13 @@ tests:
         - celery.utils.dispatch
         - celery.worker
       pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - pip
-        - python >=${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - celery --version
       - celery --help
