@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: celery
-  version: "5.5.3"
+  version: "5.6.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/celery-${{ version }}.tar.gz
-  sha256: 6c972ae7968c2b5281227f01c3a3f984037d21c5129d07bf3550cc2afc6b10a5
+  sha256: 177006bd2054b882e9f01be59abd8529e88879ef50d7918a7050c5a9f4e12912
 
 build:
   number: 0
@@ -28,13 +28,15 @@ requirements:
   run:
     - python >=${{ python_min }}
     - billiard >=4.2.1,<5.0
-    - kombu >=5.5.2,<5.6
+    - kombu >=5.6.0
     - vine >=5.1.0,<6.0
     - click >=8.1.2,<9.0
     - click-didyoumean >=0.3.0
     - click-repl >=0.2.0
     - click-plugins >=1.1.1
     - python-dateutil >=2.8.2
+    - tzlocal
+    - exceptiongroup >=1.3.0
 
 tests:
   - python:
@@ -57,7 +59,7 @@ tests:
   - requirements:
       run:
         - pip
-        - python ${{ python_min }}
+        - python >=${{ python_min }}
     script:
       - celery --version
       - celery --help
