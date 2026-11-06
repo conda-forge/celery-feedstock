@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: celery
-  version: "5.6.3"
+  version: "5.7.0"
   # celery 5.6 depends on kombu >=5.6, which requires Python >=3.10
   python_min: "3.10"
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/celery-${{ version }}.tar.gz
-  sha256: 177006bd2054b882e9f01be59abd8529e88879ef50d7918a7050c5a9f4e12912
+  sha256: 6a5dfcf6662287204f009a02002b9e66c83d4105e47ebabdc7079108772fc6f0
 
 build:
   number: 0
